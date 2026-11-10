@@ -1,0 +1,98 @@
+# MIT 8103: ADVANCED DATABASE SYSTEMS
+## Individual Practical Portfolio Report — 2026/2027 First Semester
+
+**Student Name:** Olayinka Oniyide  
+**Registration Number:**  
+**Course:** MIT 8103 Advanced Database Systems  
+**Selected Organisation:** Simulated Academic Excellence University (AEU)  
+**Project:** University Student Result Management System  
+**GitHub Repository:** https://github.com/OfficialOla/advanced-database-portfolio/
+
+
+## 1. Introduction and Project Overview
+
+This practical portfolio presents the design and implementation of a University Student Result Management System for a simulated institution, Academic Excellence University (AEU).
+
+The system manages student information, departments, lecturers, courses, semesters, course offerings and examination results. Its purpose is to demonstrate the application of advanced database concepts, including relational database design, query optimisation, transaction management, NoSQL databases and distributed database architecture.
+
+The project used PostgreSQL and pgAdmin for relational database implementation, MongoDB and MongoDB Compass for document-oriented data management, and GitHub for version control and evidence management.
+
+## 2. Summary of Portfolio Activities
+
+### Portfolio 1: Database Design and Modelling
+
+A relational database named `aeu_result_db` was designed and implemented in PostgreSQL. Seven tables were created: Department, Student, Lecturer, Course, Semester, Course_Offering and Enrollment.
+
+Primary keys, foreign keys, unique constraints and CHECK constraints were implemented. An ER diagram was prepared, and the schema was normalised to Third Normal Form (3NF). Sample records and relationship JOIN queries were tested successfully.
+
+### Portfolio 2: Query Processing and Optimisation
+
+SQL queries were developed to retrieve student results, identify students with high scores and calculate course averages.
+
+Indexes were created on selected enrollment columns and an expression index was added for total scores. `EXPLAIN ANALYZE` was used to inspect query execution plans before and after indexing.
+
+The measured execution time changed from 0.158 ms to 0.183 ms, while planning time changed from 1.463 ms to 1.500 ms. The experiment demonstrated that indexing does not automatically improve performance, particularly with small datasets.
+
+### Portfolio 3: Transactions and Concurrency Control
+
+PostgreSQL transactions were tested using COMMIT and ROLLBACK. The practical demonstrated that committed changes persist while uncommitted changes can be reversed.
+
+READ COMMITTED, REPEATABLE READ and SERIALIZABLE isolation levels were tested. Two pgAdmin sessions were used to demonstrate concurrent transactions and row-level locking through SELECT FOR UPDATE.
+
+These activities illustrated the importance of ACID properties in maintaining database reliability and consistency.
+
+### Portfolio 4: NoSQL and Advanced Data Models
+
+MongoDB was installed and configured locally. A database named `aeu_student_db` and a `students` collection were created.
+
+Student information and academic records were stored in embedded document structures. CRUD operations were successfully demonstrated using insertOne(), find(), updateOne() and deleteOne().
+
+The practical compared PostgreSQL's relational model with MongoDB's flexible document-oriented model.
+
+### Portfolio 5: Distributed Databases and Cloud Deployment
+
+A PostgreSQL range-partitioned student table was implemented using student_id as the partition key. Two partitions were created and populated with existing student records.
+
+The record counts were verified against the original student table, and EXPLAIN ANALYZE demonstrated partition pruning.
+
+Replication, sharding, availability, consistency and managed cloud database deployment were also examined as proposed architectural approaches for supporting a larger university system.
+
+## 3. Project Outcomes
+
+The project produced:
+- A working PostgreSQL relational database with seven related tables.
+- An ER diagram and normalised relational schema.
+- SQL queries, indexes and execution-plan evidence.
+- Successful transaction, rollback, isolation and concurrency tests.
+- A MongoDB student collection with embedded academic records and CRUD demonstrations.
+- A PostgreSQL partitioning implementation and distributed architecture analysis.
+- A GitHub repository containing scripts, documentation and practical evidence.
+
+## 4. Reflection and Lessons Learned
+
+This practical portfolio improved my understanding of advanced database systems and their real-world applications.
+
+I learned that good database design requires appropriate relationships, keys, constraints and normalisation. I also learned that query optimisation should be based on execution plans and actual measurements rather than assumptions.
+
+The transaction practical demonstrated how ACID properties, isolation levels and row locking help protect data when multiple users access a database.
+
+Working with MongoDB provided experience with flexible document structures, while the distributed database practical introduced partitioning, replication and scalability considerations.
+
+One important lesson was that the choice of database technology depends on the structure of the data, workload and application requirements. PostgreSQL is suitable for structured academic transactions, while MongoDB can support flexible document-oriented workloads.
+
+## 5. Conclusion
+
+The MIT 8103 practical portfolio successfully demonstrated five important areas of advanced database systems: database design, query optimisation, transaction management, NoSQL modelling and distributed database architecture.
+
+The project provided practical experience with PostgreSQL, MongoDB and GitHub and strengthened my understanding of database reliability, performance, consistency and scalability.
+
+## 6. References
+
+1. PostgreSQL Global Development Group. PostgreSQL Documentation. https://www.postgresql.org/docs/
+2. MongoDB, Inc. MongoDB Manual. https://www.mongodb.com/docs/manual/
+3. GitHub Documentation. https://docs.github.com/
+4. Amazon Web Services. Amazon RDS for PostgreSQL Documentation. https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html
+
+## 7. Declaration of AI Assistance
+
+AI tools were used to support explanations, SQL drafting, troubleshooting and documentation during this practical portfolio. I reviewed, executed and tested the relevant database operations in PostgreSQL and MongoDB. I take responsibility for the submitted work, its accuracy and my understanding of the implemented concepts.
