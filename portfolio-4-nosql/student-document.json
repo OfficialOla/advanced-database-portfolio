@@ -1,0 +1,24 @@
+{
+  "matric_no": "AEU001",
+  "full_name": "John Mensah",
+  "email": "john.mensah.concurrent@aeu.edu",
+  "department": "Computer Science",
+  "academic_records": [
+    {
+      "course_code": "CSC401",
+      "course_title": "Advanced Database Systems",
+      "credit_unit": 3,
+      "ca_score": 35,
+      "exam_score": 55,
+      "total_score": 90
+    },
+    {
+      "course_code": "CSC402",
+      "course_title": "Distributed Computing",
+      "credit_unit": 3,
+      "ca_score": 30,
+      "exam_score": 50,
+      "total_score": 80
+    }
+  ]
+}
